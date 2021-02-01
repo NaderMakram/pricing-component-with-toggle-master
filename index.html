@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./mobile.css">
+  <script defer src="script.js"></script>
+
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+</head>
+
+<body class="flex-col">
+
+  <img class="bg-left" src="./images/bg-top.svg" alt="background-pattern-top">
+  <img class="bg-right" src="./images/bg-bottom.svg" alt="background-pattern-bottom">
+
+  <div class="wrapper flex-col">
+
+    <!-- header -->
+    <div class="header flex-col">
+      <h1 class="main-header">Our Pricing</h1>
+      <!-- toggle -->
+      <div class="pricing-box flex-row">
+        <span>Annually</span>
+        <span><input class="pricing-toggle" type="checkbox" name="checkbox-for-subscription-type"></span>
+        <span>Monthly</span>
+      </div>
+    </div>
+    <!-- cards -->
+    <div class="cards-container flex-row">
+      <div class="card flex-col">
+        <p class="plan-name">Basic</p>
+        <div class="plan-price flex-row">
+          <span class="plan-currency">$</span>
+          <p class="plan-price-month">19.99</p>
+          <p class="plan-price-year">199.99</p>
+        </div>
+        <div class="specs flex-col">
+          <p class="spec">500 GB Storage</p>
+          <p class="spec">2 Users Allowed</p>
+          <p class="spec">Send up to 3 GB</p>
+        </div>
+        <button>LEARN MORE</button>
+      </div>
+      <div class="card middle-card middle flex-col">
+        <p class="plan-name">Professional</p>
+        <div class="plan-price flex-row">
+          <span class="plan-currency">$</span>
+          <p class="plan-price-month">24.99</p>
+          <p class="plan-price-year">249.99</p>
+        </div>
+        <div class="specs flex-col">
+          <p class="spec">1 TB Storage</p>
+          <p class="spec">5 Users Allowed</p>
+          <p class="spec">Send up to 10 GB</p>
+        </div>
+        <button>LEARN MORE</button>
+      </div>
+      <div class="card flex-col">
+        <p class="plan-name">Master</p>
+        <div class="plan-price flex-row">
+          <span class="plan-currency">$</span>
+          <p class="plan-price-month">39.99</p>
+          <p class="plan-price-year">399.99</p>
+        </div>
+        <div class="specs flex-col">
+          <p class="spec">2 TB Storage</p>
+          <p class="spec">10 Users Allowed</p>
+          <p class="spec">Send up to 20 GB</p>
+        </div>
+        <button>LEARN MORE</button>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
+
+
+
+
+
+<!--  Our Pricing
+  Annually
+  Monthly
+
+  Basic
+  &dollar;19.99
+  &dollar;199.99
+  500 GB Storage
+  2 Users Allowed
+  Send up to 3 GB
+  Learn More
+
+  Professional
+  &dollar;24.99
+  &dollar;249.99
+  1 TB Storage
+  5 Users Allowed
+  Send up to 10 GB
+  Learn More
+
+  Master
+  &dollar;39.99
+  &dollar;399.99
+  2 TB Storage
+  10 Users Allowed
+  Send up to 20 GB
+  Learn More -->

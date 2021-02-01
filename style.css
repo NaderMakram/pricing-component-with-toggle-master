@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+
+:root{
+  /* Linear Gradient */
+  --light-gradient: rgb(163, 168, 240);
+  --dark-gradient: rgb(105, 111, 221);
+
+  /* colors */
+  /* background */
+  --Very-Light-Grayish-Blue: rgb(246, 246, 254);
+  /* annual monthly */
+  --Light-Grayish-Blue: rgb(179, 181, 198);
+  /* ourPricing master  1TB*/
+  --Grayish--Blue: rgb(109, 112, 141);
+  /* dark font color */
+  --Dark-Grayish-Blue: rgb(73, 76, 95);
+}
+
+/* utilities */
+.flex-col, .flex-row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.flex-col{
+  flex-direction: column;
+}
+
+
+
+/* main styling */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+
+  /* border: 1px solid red; */
+}
+
+html{
+  font-size: calc(10px + (20 - 10) * ((100vw - 800px) / (1600 - 800)));
+}
+
+button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: calc(8px + (16 - 8) * ((100vw - 800px) / (1600 - 800)));
+}
+
+
+body{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  
+  background: var(--Very-Light-Grayish-Blue);
+}
+
+body .bg-left{
+  position: absolute;
+  top: 0;
+  left: 100vw;
+  transform: translateX(-100%);
+  z-index: -1;
+}
+
+body .bg-right{
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  transform: translateY(-100%);
+  z-index: -1;
+}
+
+
+/* wrapper */
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+  justify-content: space-evenly;
+  /* margin-bottom: 2rem; */
+}
+
+/* main header and pricing box */
+.wrapper .header {
+/* flex: 1; */
+}
+.wrapper .header  * {
+  margin: 0.5rem;
+}
+
+.main-header{
+  color: var(--Grayish--Blue);
+}
+.pricing-box{
+  color: var(--Light-Grayish-Blue);
+}
+
+
+
+
+/* pricing toggle */
+.pricing-toggle{
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  position: relative;
+  width: 3.5rem;
+  height: 1.8rem;
+  background: linear-gradient(to right, var(--light-gradient), var(--dark-gradient));
+  border-radius: 5rem;
+}
+
+.pricing-toggle::before{
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #fff;
+  position: absolute;
+  top: 0.15rem;
+  left: 0;
+  margin: 0 0.2rem;
+  border-radius: 5rem;
+  transition: all 0.5s;
+
+}
+.pricing-toggle:checked:before{
+  left: 1.6rem;
+}
+
+
+
+
+/* cards */
+.wrapper .cards-container{
+  width: 80%;
+  height: 70vmin;
+}
+.card{
+  background: #fff;
+  color: var(--Grayish--Blue);
+  padding: 1rem 0.5rem;
+  flex: 1;
+  border-radius: 0.8rem;
+  box-shadow: 0 0.7rem 2rem 0.2rem rgba(0, 0, 0, 0.1);
+}
+
+.card:not(.middle){
+  cursor: pointer;
+}
+
+.card > * {
+  padding: 1vh 0;
+  width: 80%;
+}
+
+
+.card.middle{
+  transform: scale(1.1);
+  background: linear-gradient(to top, var(--dark-gradient), var(--light-gradient));
+  color: #fff;
+  transition: all 0.3s;
+  z-index: 2;
+
+}
+
+.card.middle *{
+  color: #fff;
+}
+.card.middle button{
+  color: var(--dark-gradient);
+  background: #fff;
+}
+
+.card .plan-price{
+  font-size: 3rem;
+  color: var(--Dark-Grayish-Blue);
+}
+.card .plan-currency{
+  margin-right: 0.5rem;
+  font-size: 2.5rem;
+}
+
+
+.card .specs .spec {
+  width: 100%;
+  padding: 2vh;
+  border-bottom: 1px solid var(--Light-Grayish-Blue);
+}
+
+.card .specs :first-child{
+  border-top: 1px solid var(--Light-Grayish-Blue);
+}
+
+
+.card button{
+  height: 2.8rem;
+  margin: 1.5rem 0;
+  letter-spacing: 1px;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  color: #fff;
+  background: linear-gradient(to right, var(--light-gradient), var(--dark-gradient));
+}
+
+.card button:hover{
+  filter: brightness(0.9);
+}

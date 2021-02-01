@@ -1,0 +1,94 @@
+@media screen and (max-width:450px) {
+
+
+ 
+  
+  /* main styling */
+  html{
+    font-size: 16px;
+  }
+  
+  body{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;    
+  }
+  
+  body .bg-left{
+    /* display: none; */
+    position: absolute;
+    top: 0;
+    left: 100vw;
+    transform: translateX(-100%);
+    z-index: -1;
+  }
+  
+  body .bg-right{
+    display: none;
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    transform: translateY(-100%);
+    z-index: -1;
+  }
+  
+  
+  /* wrapper */
+  .wrapper{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: auto;
+    justify-content: none;
+    margin: 2rem 0;
+  }
+  
+  /* main header and pricing box */ 
+  .wrapper .header{
+    margin-bottom: 2rem;
+  }
+  .wrapper .header  * {
+    margin: 0.25rem;
+  }
+  
+  .main-header{
+    color: var(--Grayish--Blue);
+  }
+  .pricing-box{
+    position: sticky;
+    top: 0;
+    z-index: 5;
+  }
+  
+  
+  
+  
+  
+  /* cards */
+  .wrapper .cards-container{
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+  .card{
+    width: 80%;
+    margin-bottom: 2rem;
+    cursor: none;
+  }
+  
+  .card > * {
+    padding: 1vh 0;
+    width: 80%;
+  }
+  
+  
+  .card.middle{
+    transform: scale(1);
+  }
+  
+  button{
+    font-size: 10px;
+  }
+}
